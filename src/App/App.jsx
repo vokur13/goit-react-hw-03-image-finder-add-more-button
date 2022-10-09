@@ -11,7 +11,10 @@ export class App extends Component {
   };
   state = {
     query: '',
+    gallery: [],
     page: this.props.initialValue,
+    total: null,
+    totalHits: null,
   };
 
   handleFormSubmit = ({ query }) => {
@@ -20,15 +23,27 @@ export class App extends Component {
     if (q === '') {
       return toast.warn('Please let us know your query item');
     }
-    this.setState({ query: q, page: initialValue });
+    this.setState({
+      query: q,
+      page: initialValue,
+      gallery: [],
+      total: null,
+      totalHits: null,
+    });
   };
 
   render() {
-    const { query, page } = this.state;
+    const { query, page, gallery, total, totalHits } = this.state;
     return (
       <>
         <Searchbar onSubmit={this.handleFormSubmit} />
-        <ImageGalleryHub query={query} page={page} />
+        <ImageGalleryHub
+          query={query}
+          page={page}
+          gallery={gallery}
+          total={total}
+          totalHits={totalHits}
+        />
         <ToastContainer position="top-left" autoClose={5000} />
       </>
     );
