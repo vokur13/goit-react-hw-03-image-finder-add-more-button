@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/goit-react-hw-03-image-finder-add-more-button/static/css/main.86ceb9c0.css",
+    "main.js": "/goit-react-hw-03-image-finder-add-more-button/static/js/main.397a77ba.js",
+    "index.html": "/goit-react-hw-03-image-finder-add-more-button/index.html",
+    "main.86ceb9c0.css.map": "/goit-react-hw-03-image-finder-add-more-button/static/css/main.86ceb9c0.css.map",
+    "main.397a77ba.js.map": "/goit-react-hw-03-image-finder-add-more-button/static/js/main.397a77ba.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.86ceb9c0.css",
+    "static/js/main.397a77ba.js"
+  ]
+}
