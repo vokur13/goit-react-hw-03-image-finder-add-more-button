@@ -32,7 +32,7 @@ export class ImageGalleryHub extends Component {
 
   async componentDidUpdate(prevProps, prevState) {
     const { query } = this.props;
-    const { page, total, totalHits } = this.state;
+    const { page } = this.state;
 
     if (prevProps.query !== query) {
       try {
