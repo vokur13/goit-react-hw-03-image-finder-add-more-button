@@ -10,22 +10,21 @@ export class App extends Component {
     initialValue: 1,
   };
   state = {
+    page: this.props.initialValue,
     query: '',
     gallery: [],
-    page: this.props.initialValue,
     total: null,
     totalHits: null,
   };
 
   handleFormSubmit = ({ query }) => {
-    const { initialValue } = this.props;
     const q = query.trim().toLowerCase();
     if (q === '') {
       return toast.warn('Please let us know your query item');
     }
     this.setState({
+      page: this.props.initialValue,
       query: q,
-      page: initialValue,
       gallery: [],
       total: null,
       totalHits: null,
@@ -33,13 +32,13 @@ export class App extends Component {
   };
 
   render() {
-    const { query, page, gallery, total, totalHits } = this.state;
+    const { page, query, gallery, total, totalHits } = this.state;
     return (
       <>
         <Searchbar onSubmit={this.handleFormSubmit} />
         <ImageGalleryHub
-          query={query}
           page={page}
+          query={query}
           gallery={gallery}
           total={total}
           totalHits={totalHits}
